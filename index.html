@@ -9,8 +9,8 @@
 </head>
 <body>
 
-<header>
-    <!-- Menu bar: turns into a button on phones -->
+  <header>
+    <!-- Menu bar: turns into a hamburger button on phones -->
     <nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand" href="#search">MA Airlines</a>
@@ -28,6 +28,7 @@
   </header>
 
   <main>
+
     <section id="search" class="bg-danger text-white py-5">
       <div class="container">
         <h1 class="mb-4">Where would you like to go?</h1>
@@ -66,6 +67,25 @@
             </div>
           </div>
         </form>
+      </div>
+    </section>
+
+    <section id="offers" class="container my-5">
+      <h2 class="mb-4">Featured offers</h2>
+      <!-- loading="lazy" means each image only loads when the user scrolls near it, so the page loads faster on phones -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col"><article class="card h-100">
+          <img src="images/sydney.jpg" class="card-img-top object-fit-cover" height="200" alt="Sydney Opera House at sunset" loading="lazy">
+          <div class="card-body"><h3 class="h5">Sydney</h3><p>Fares from $129 one way.</p><a href="#search" class="btn btn-danger">Search flights</a></div>
+        </article></div>
+        <div class="col"><article class="card h-100">
+          <img src="images/perth.jpg" class="card-img-top object-fit-cover" height="200" alt="Perth city skyline beside the river" loading="lazy">
+          <div class="card-body"><h3 class="h5">Perth</h3><p>Fares from $189 one way.</p><a href="#search" class="btn btn-danger">Search flights</a></div>
+        </article></div>
+        <div class="col"><article class="card h-100">
+          <img src="images/auckland.jpg" class="card-img-top object-fit-cover" height="200" alt="Auckland skyline and Sky Tower" loading="lazy">
+          <div class="card-body"><h3 class="h5">Auckland</h3><p>Fares from $279 one way.</p><a href="#search" class="btn btn-danger">Search flights</a></div>
+        </article></div>
       </div>
     </section>
 
