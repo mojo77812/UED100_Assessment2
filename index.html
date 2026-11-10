@@ -9,10 +9,61 @@
 </head>
 <body>
 
+<header>
+    <!-- Menu bar: turns into a button on phones -->
+    <nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#search">MA Airlines</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle menu"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#search">Search flights</a>
+            <a class="nav-link" href="#offers">Offers</a>
+            <a class="nav-link" href="#login">Frequent Flyer login</a>
+            <a class="nav-link" href="#contact">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    <section id="search" class="bg-danger text-white py-5">
+      <div class="container">
+        <h1 class="mb-4">Where would you like to go?</h1>
+        <!-- "novalidate" turns off the browser's own pop-up errors so Bootstrap's red messages show instead -->
+        <form class="needs-validation bg-white text-dark p-3 rounded" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-3">
+              <label for="from" class="form-label">Departure location</label>
+              <input id="from" class="form-control" placeholder="e.g. Melbourne" required>
+              <div class="invalid-feedback">Enter a departure location.</div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <label for="to" class="form-label">Arrival location</label>
+              <input id="to" class="form-control" placeholder="e.g. Sydney" required>
+              <div class="invalid-feedback">Enter an arrival location.</div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <label for="depart" class="form-label">Departure date</label>
+              <input id="depart" type="date" class="form-control" required>
+              <div class="invalid-feedback">Choose a departure date.</div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <label for="return" class="form-label">Return date</label>
+              <input id="return" type="date" class="form-control" required>
+              <div class="invalid-feedback">Choose a return date on or after the departure date.</div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-danger">Search flights</button>
+              <div class="form-result text-success mt-2" role="status"></div>
+            </div>
+            </div>
+        </form>
+      </div>
+    </section>
 
-
-
+  </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
