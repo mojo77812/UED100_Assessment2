@@ -1,3 +1,8 @@
+// stops the return date being set earlier than the departure date
+document.getElementById("depart").addEventListener("change", (e) => {
+  document.getElementById("return").min = e.target.value;
+});
+
 // runs when any of the three forms are submitted
 document.querySelectorAll(".needs-validation").forEach((form) => {
   form.addEventListener("submit", (e) => {
