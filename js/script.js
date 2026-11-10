@@ -12,3 +12,8 @@ document.querySelectorAll(".needs-validation").forEach((form) => {
     form.querySelector(".form-result").textContent = form.checkValidity() ? "Next time..." : "";
   });
 });
+
+// the passkey button shows the same message
+document.getElementById("passkeyBtn").addEventListener("click", () => {
+  document.querySelector("#login .form-result").textContent = "Next time...";
+});
