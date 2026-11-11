@@ -4,7 +4,6 @@
   --dark-red: #8f0000; /*used when the mouse is over a button*/
   --bs-danger-rgb: 192, 0, 0; /*bootstrap - for the red menu, banner & progress bar*/
 }
-
 /*bootstrap stores its button colours in variables, so we point them at our red*/
 .btn-danger {
   --bs-btn-bg: var(--red);
@@ -14,7 +13,6 @@
   --bs-btn-active-bg: var(--dark-red);
   --bs-btn-active-border-color: var(--dark-red);
 }
-
 /*same thing as previous but for the white button (the passkey button)*/
 .btn-outline-danger {
   --bs-btn-color: var(--red);
@@ -23,4 +21,9 @@
   --bs-btn-hover-border-color: var(--red);
   --bs-btn-active-bg: var(--red);
   --bs-btn-active-border-color: var(--red);
+}
+/*bootstrap fades the menu links, so we make them solid white since the navbar is hard to see on red*/
+.navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: #fff;
 }
